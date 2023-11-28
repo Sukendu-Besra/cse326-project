@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fbeaeb;
+        }
+
+        header {
+            background-color: #2f3c7e;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transform: scale(1.01);
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        progress {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #2f3c7e;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Donate Now</h1>
+    </header>
+
+    <section>
+        <form id="donationForm" onsubmit="return submitForm()">
+            <label for="amount">Donation Amount ($):</label>
+            <input type="number" id="amount" min="1" required>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <button type="submit">Donate</button>
+        </form>
+
+        <progress id="progressBar" max="100" value="0"></progress>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Donate Now</p>
+    </footer>
+
+    <script>
+        function submitForm() {
+            var amount = document.getElementById('amount').value;
+            var progressBar = document.getElementById('progressBar');
+
+            // Simulate a delay to show progress
+            var progress = 0;
+            var interval = setInterval(function () {
+                progress += 5;
+                progressBar.value = progress;
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    alert('Thank you for your donation!');
+                    document.getElementById('donationForm').reset();
+                    progressBar.value = 0;
+                }
+            }, 100);
+
+            return false; // Prevents the form from actually submitting
+        }
+    </script>
+
+</body>
+</html>

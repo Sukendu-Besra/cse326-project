@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Available Pets</title>
+  <link rel="stylesheet" href="adopt.css">
+</head>
+<body>
+  <header>
+    <div class="image">
+    <img src="home.jpg" alt="Your Logo">
+  </div>
+    <h2 class="pet">Home Pet</h2>
+    <form action="/search" method="get">
+      
+      <input type="text" id="search" name="q" placeholder="Search puppies, kittens etc." onclick="performSearch()">
+  </form>
+    <nav class="navigation">
+        <button class="btnlogin-popup" onclick="redirectToLoginPage()">Login</button>
+        <button class="btnsignup-popup" onclick="redirectToSignupPage()">Sign Up</button>
+    </nav>
+   
+  </header>
+
+  <main class="pet-grid">
+    <mydiv class="mydiv">
+    <div class="pet-card">
+      <img src="download.jpg" alt="Pet 1">
+      <h2>BOND</h2>
+      <p>Young</p>
+      <p>Breed: Labrador Retriever</p>
+      <a href="dog1.html"><button class="adopt-btn">Adopt Me</button></a>
+    </div>
+    <div class="pet-card">
+      <img src="mowgli.jpg" alt="Pet 1">
+      <h2>MOWGLI</h2>
+      <p>Young</p>
+      <p>Breed: Affenpinscher </p>
+      <a href="dog2.html"><button class="adopt-btn">Adopt Me</button></a>
+    </div>
+    <div class="pet-card">
+      <img src="persi.webp" alt="Pet 1">
+      <h2>CHLOE</h2>
+      <p>Young</p>
+      <p>Breed: Persian cat</p>
+      <a href="dog3.html"><button class="adopt-btn">Adopt Me</button></a>
+    </div>
+    <div class="pet-card">
+      <img src="lucy.jpg" alt="Pet 1">
+      <h2>LUCY</h2>
+      <p>Adult</p>
+      <p>Breed: Pit Bull Terrier </p>
+      <a href="dog4.html"><button class="adopt-btn">Adopt Me</button></a>
+    </div>
+    <div class="pet-card">
+      <img src="ame1.jpg" alt="Pet 1">
+      <h2>TIMMY</h2>
+      <p>Adult</p>
+      <p>Breed:  American Shorthair </p>
+      <a href="dog5.html"><button class="adopt-btn">Adopt Me</button></a>
+    </div>
+    <div class="pet-card">
+      <img src="zeus.jpg" alt="Pet 1">
+      <h2>ZEUS</h2>
+      <p>Adult</p>
+      <p>Breed: Guinea Pig Mix </p>
+      <a href="dog6.html"><button class="adopt-btn">Adopt Me</button></a>
+    </div>
+    <div class="pet-card">
+      <img src="pome.jpg" alt="Pet 1">
+      <h2>BEAU & JACK</h2>
+      <p>Adult</p>
+      <p>Breed:  Pomeranian </p>
+      <a href="dog7.html"><button class="adopt-btn">Adopt Me</button></a>
+    </div>
+    <div class="pet-card">
+      <img src="shiba.jpg" alt="Pet 1">
+      <h2>DOGE</h2>
+      <p>Adult</p>
+      <p>Breed: Shiba Inu </p>
+      <a href="dog8.html"><button class="adopt-btn">Adopt Me</button></a>
+    </div>
+    <div class="pet-card">
+      <img src="rabbit.jpg" alt="Pet 1">
+      <h2>LUCKY</h2>
+      <p>Young</p>
+      <p>Breed: Mini Lop & American Fuzzy Lop Mix </p>
+      <a href="dog9.html"><button class="adopt-btn">Adopt Me</button></a>
+    </div>
+    <div class="pet-card">
+      <img src="pug.jpg" alt="Pet 1">
+      <h2>FIONA</h2>
+      <p>Puppy</p>
+      <p>Breed:  Pug & Terrier Mix </p>
+      <a href="dog10.html"><button class="adopt-btn">Adopt Me</button></a>
+    </div>
+  </mydiv>
+  <section>
+    <h2 class="h4">Welcome to our Animal Welfare Platform!</h2>
+    <p class="p">Explore the various ways you can contribute to the well-being of animals.</p>
+
+    <div class="highlights">
+        <div class="highlight" onclick="openAdoptPage()">
+            <img src="adoption.png" alt="Adopt Icon">
+            <h3>Adopt a Companion</h3>
+            <p>Find your perfect furry friend and provide a loving home.</p>
+        </div>
+
+        <div class="highlight" onclick="openDonatePage()">
+            <img src="pets.png" alt="Donate Icon">
+            <h3>Make a Donation</h3>
+            <p>Support our cause by making a financial contribution to help animals in need.</p>
+        </div>
+
+        <div class="highlight" onclick="openVolunteerPage()">
+            <img src="protest.png" alt="Volunteer Icon">
+            <h3>Volunteer Your Time</h3>
+            <p>Join us in our efforts by volunteering your time and skills.</p>
+        </div>
+    </div>
+
+    <p class="pa">Together, we can make a positive impact on the lives of animals. Join us in creating a better world for our furry friends!</p>
+</section>
+    <div class="shelter">
+      <h2>Shelter for Pets</h2>
+      <p class="one">Welcome to our pet shelter! We provide a safe and caring environment for animals in need. Our mission is to find loving homes for these pets and ensure their well-being.</p>
+      <p class="two">If you are considering adopting a pet or would like to contribute to our cause, <a href="#">contact us</a> for more information.</p>
+    
+      <h2 class="h3">Donation Drive for Pets</h2>
+      <p class="three">We are currently organizing a donation drive to support our efforts in caring for and rehoming pets. Your contributions can make a significant impact on the lives of these animals.</p>
+      <p class="four">Ways to contribute:</p>
+      <ul>
+        <li>Monetary donations</li>
+        <li>Donations of pet food and supplies</li>
+        <li>Volunteer your time at the shelter</li>
+      </ul>
+      <p class="five">Your generosity helps us provide medical care, food, and a comfortable environment for the animals in our care.</p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

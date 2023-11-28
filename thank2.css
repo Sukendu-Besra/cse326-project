@@ -1,0 +1,50 @@
+/* Add the existing CSS styles you've been using */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #6504b5;
+    color: #fff;
+  }
+.thank-you-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  .thank-you-page img {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .additional-links {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .additional-links h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .additional-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .additional-links li {
+    margin: 10px 0;
+  }
+  
+  .additional-links a {
+    text-decoration: none;
+    color: #6504b5;
+    font-weight: bold;
+  }
+  
+  .additional-links a:hover {
+    text-decoration: underline;
+  }
+  

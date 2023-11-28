@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Community Forum</title>
+  <link rel="stylesheet" href="community.css">
+</head>
+<body>
+  <header>
+    <h1>Community Forum</h1>
+  </header>
+
+  <main class="community-forum">
+    <div class="forum-posts">
+      <h2>Recent Posts</h2>
+      <ul>
+        <li>
+          <h3>Topic: Introducing a New Pet</h3>
+          <p>User123: "Looking for advice on how to introduce a new pet to my household. Any tips?"</p>
+        </li>
+        <li>
+          <h3>Topic: Pet Training Methods</h3>
+          <p>PetLover456: "What training methods have worked best for your pets? Let's share our experiences."</p>
+        </li>
+        <li>
+          <h3>Topic: Adopted Pets' Stories</h3>
+          <p>FurryFriendsFan: "Share your heartwarming stories about your adopted pets and let's spread some joy!"</p>
+        </li>
+        <!-- Add more forum posts as needed -->
+      </ul>
+    </div>
+    
+    <div class="create-post">
+      <h2>Create a New Post</h2>
+      <form>
+        <label for="post-topic">Topic:</label>
+        <input type="text" id="post-topic" name="post-topic">
+        
+        <label for="post-content">Content:</label>
+        <textarea id="post-content" name="post-content"></textarea>
+        
+       <!--<a href="adopt.html"><button class="adopt-btn " onclick="redirectToSubmitpage()" >Post</button></a>-->
+       <button class="adopt-btn " onclick="redirectToSubmitpage()" >Post</button>
+      </form>
+    </div>
+  </main>
+  <script>
+    function redirectToSubmitPage() {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

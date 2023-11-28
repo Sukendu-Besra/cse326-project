@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Your Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fbeaeb;
+        }
+
+        header {
+            background-color: #2f3c7e;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        progress {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #thankYouMessage {
+            display: none;
+            color: #4caf50;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #2f3c7e;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Volunteer Your Time</h1>
+    </header>
+
+    <section>
+        <form id="volunteerForm" onsubmit="return submitForm()">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="interest">Select Volunteering Interest:</label>
+            <select id="interest" required>
+                <option value="event">Event Organization</option>
+                <option value="community">Community Outreach</option>
+                <option value="education">Education Programs</option>
+            </select>
+
+            <button type="submit">Volunteer Now</button>
+        </form>
+
+        <progress id="progressBar" max="100" value="0"></progress>
+
+        <div id="thankYouMessage">Thank you for volunteering your time!</div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Volunteer Your Time</p>
+    </footer>
+
+    <script>
+        function submitForm() {
+            var progressBar = document.getElementById('progressBar');
+            var thankYouMessage = document.getElementById('thankYouMessage');
+
+            // Simulate a delay to show progress
+            var progress = 0;
+            var interval = setInterval(function () {
+                progress += 5;
+                progressBar.value = progress;
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    showThankYouMessage();
+                    document.getElementById('volunteerForm').reset();
+                    progressBar.value = 0;
+                }
+            }, 100);
+
+            return false; // Prevents the form from actually submitting
+        }
+
+        function showThankYouMessage() {
+            var thankYouMessage = document.getElementById('thankYouMessage');
+            thankYouMessage.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

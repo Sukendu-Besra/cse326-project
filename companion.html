@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Companion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fbeaeb;
+        }
+
+        header {
+            background-color: #2f3c7e;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffd2;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .pet-card {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .pet-card img {
+            height: 250px;
+            width: 250px;
+        }
+
+        .pet-card:hover {
+            background-color: #fbeaeb;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+        }
+        #details {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        button {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+  
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #2f3c7e;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Adopt a Companion</h1>
+    </header>
+
+    <section>
+        <div class="pet-card" onclick="showDetails('dog')">
+            <img src="lucy.jpg" alt="Dog">
+            <h2>Dog</h2>
+        </div>
+
+        <div class="pet-card" onclick="showDetails('cat')">
+            <img src="persi.webp" alt="Cat">
+            <h2>Cat</h2>
+        </div>
+    </section>
+
+    <section id="details" style="display: none;">
+        <h2 id="pet-name"></h2>
+        <p id="Age"></p>
+        <p id="Breed"></p>
+        <p id="pet-description"></p>
+        <button onclick="adopt()">Adopt Now</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Adopt a Companion</p>
+    </footer>
+
+    <script>
+        function showDetails(petType) {
+            document.getElementById('details').style.display = 'block';
+
+            if (petType === 'dog') {
+                document.getElementById('pet-name').innerText = 'LUCY';
+                document.getElementById('Age').innerText = 'Adult';
+                document.getElementById('Breed').innerText = 'Breed: Pit Bull Terrier';
+                document.getElementById('pet-description').innerText = 'Friendly and loyal companion.';
+              
+                
+            } else if (petType === 'cat') {
+                document.getElementById('pet-name').innerText = 'CHLOE';
+                document.getElementById('Age').innerText = 'Young';
+                document.getElementById('Breed').innerText = 'Breed: Persian cat';
+                document.getElementById('pet-description').innerText = 'Independent and playful friend.';
+            }
+        }
+
+        function adopt() {
+            alert('Congratulations! You have adopted a companion.');
+        }
+    </script>
+
+</body>
+</html>
